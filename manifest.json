@@ -1,0 +1,36 @@
+{
+    "name":"SecretHydra",
+    "version":"0.1",
+    "manifest_version":3,
+    "description":"Dub over Secret Hitler with a Hydra and SHIELD theme",
+    "icons":{
+        "16":"icons/shield.png",
+        "32":"icons/shield.png",
+        "64":"icons/shield.png"
+    },
+    "action":{
+        "default_popup":"popup/popup.html"
+    },
+    "host_permissions": [
+        "https://secret-hitler.com/*"
+    ],
+    "content_scripts":[
+        {
+            "matches":[
+                "https://secret-hitler.com/*"
+            ],
+            "js": ["scripts/injected.js","scripts/style-changes.js"],
+            "run_at":"document_end"
+        }
+    ],
+    "web_accessible_resources":[
+        {
+            "resources":["images/*.*","icons/*.*","styles/*.*","scripts/*.*"],
+            "matches":["<all_urls>"]
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "permissions": ["declarativeNetRequest", "scripting"]
+}
