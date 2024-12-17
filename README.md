@@ -8,7 +8,7 @@ This extension makes the game more socially acceptable and in my opinion more fu
   - Fascists -> Hydra Agents
   - Liberals -> SHIELD Agents
   - President -> Deputy Director
-  - Chandellor -> Director
+  - Chancellor -> Director
 - Dark Mode
 - Removal of some clutter on the homescreen, this could be considered adblock.
   - Removes [Secret Voldemort](https://secret-voldemort.de) links
