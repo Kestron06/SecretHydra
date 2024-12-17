@@ -11,9 +11,9 @@ This extension makes the game more socially acceptable and in my opinion more fu
   - Chandellor -> Director
 - Dark Mode
 - Removal of some clutter on the homescreen, this could be considered adblock.
-  - Removes [https://secret-voldemort.de](Secret Voldemort) links
-  - Removes [https://skyjo.de](Skyjo) links
-  - Removes [https://mach-and-play.vercel.app](Mach & Play) links
+  - Removes [Secret Voldemort](https://secret-voldemort.de) links
+  - Removes [Skyjo](https://skyjo.de) links
+  - Removes [Mach & Play](https://mach-and-play.vercel.app) links
 - Makes some minor grammatical fixes, primarily capitalization in places where all lowercase is used, and some rewording to be more clear or concise in a few minor places.
 - Makes the Allow History checkbox ticked by default (There is really no good reason to disable this, as players can just write down how the game transpired.)
 - Adds a home menu link to the About page
