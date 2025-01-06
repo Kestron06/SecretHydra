@@ -1,6 +1,6 @@
 {
     "name":"SecretHydra",
-    "version":"0.1",
+    "version":"0.2",
     "manifest_version":3,
     "description":"Dub over Secret Hitler with a Hydra and SHIELD theme",
     "icons":{
