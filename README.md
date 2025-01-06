@@ -14,6 +14,7 @@ This extension makes the game more socially acceptable and in my opinion more fu
   - Removes [Secret Voldemort](https://secret-voldemort.de) links
   - Removes [Skyjo](https://skyjo.de) links
   - Removes [Mach & Play](https://mach-and-play.vercel.app) links
+  - Removes [Privacy Game](https://privacy-game.de/) links
 - Makes some minor grammatical fixes, primarily capitalization in places where all lowercase is used, and some rewording to be more clear or concise in a few minor places.
 - Makes the Allow History checkbox ticked by default (There is really no good reason to disable this, as players can just write down how the game transpired).
 - Adds a home menu link to the About page
@@ -21,3 +22,4 @@ This extension makes the game more socially acceptable and in my opinion more fu
 ## Current Planned Future Changes
 - A button to randomly shuffle the player order instead of manually doing it placed before and between rounds for the host.
 - A button to downvote the next three elections with the intent to place the next policy in the deck.
+- A toggle button to hide identity
