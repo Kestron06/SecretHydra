@@ -7,9 +7,14 @@ document.body.appendChild(newMainChunk);
 //Various grammar
 document.body.innerHTML=document.body.innerHTML.replaceAll("english / german", "English/German,");
 document.body.innerHTML=document.body.innerHTML.replaceAll("italian", "Italian");
-document.body.innerHTML=document.body.innerHTML.replaceAll("about", "About");
+document.body.innerHTML=document.body.innerHTML.replaceAll(` target="_blank">about`, ">About");
 document.body.innerHTML=document.body.innerHTML.replaceAll(">discord", ">Secret-hitler.com Discord</a> <a href='https://discord.gg/k3yVkrrvez' target=`_blank`>Secret Hydra Discord</a>");
 document.body.innerHTML=document.body.innerHTML.replaceAll("Buy me a coffee :)", "Buy Secret-hitler.com devs a coffee");
+
+//About page
+if(document.body.innerHTML.includes("was born out of my passion")){
+    document.body.innerHTML=`What follows is the about section for the default website. The about for the extension can be found on <a href="https://github.com/Kestron06/SecretHydra">Github</a>.<br><a href="/">Go back to the main page?</a><br><br><hr><br>${document.body.innerHTML}`;
+}
 
 //Mid-game changes
 function repeatedly(){
@@ -29,7 +34,6 @@ function repeatedly(){
     for(var i=0;i<els.length;i++){
         if(els[i].innerHTML.includes("Allow history")&&els[i].style.backgroundColor!=="rgba(50,50,50,148)"){
             els[i].style.backgroundColor="rgba(50,50,50,148)";
-            console.log("History Checkbox Background");
         }
     }
 
@@ -38,7 +42,6 @@ function repeatedly(){
     for(var i=0;i<els.length;i++){
         if(els[i].title.includes("vote")&&els[i].style.backgroundColor!=="rgba(50,50,50,148)"){
             els[i].style.backgroundColor="rgba(50,50,50,148)";
-            console.log(`Voting Buttons Background\n\n${els[i].innerHTML}`);
         }
     }
 
@@ -47,21 +50,18 @@ function repeatedly(){
     for(var i=0;i<els.length;i++){
         if(els[i].innerHTML.includes("Liberal")||els[i].innerHTML.includes("Fascist")||els[i].innerHTML.includes("Hitler")){
             els[i].innerHTML=els[i].innerHTML.replaceAll("Liberals","SHIELD Agents").replaceAll("Liberal","SHIELD Agent").replaceAll("Fascists","Hydra Agents").replaceAll("Hitler","Pierce").replaceAll("Fascist","Hydra Agent");
-            console.log("Div Text Replacement");
         }
     }
     els=document.getElementsByTagName("h4");
     for(var i=0;i<els.length;i++){
         if(els[i].innerHTML.includes("Liberal")||els[i].innerHTML.includes("Fascist")||els[i].innerHTML.includes("Hitler")){
             els[i].innerHTML=els[i].innerHTML.replaceAll("Liberals","SHIELD Agents").replaceAll("Liberal","SHIELD Agent").replaceAll("Fascists","Hydra Agents").replaceAll("Hitler","Pierce").replaceAll("Fascist","Hydra Agent");
-            console.log("H4 Text Replacement");
         }
     }
     els=document.getElementsByClassName("jyFGLZ");
     for(var i=0;i<els.length;i++){
         if(/\-\s(Chancellor|President)/ig.test(els[i].innerHTML)){
             els[i].innerHTML=els[i].innerHTML.replace(/\-\sChancellor/ig,"- Director").replace(/\-\sPresident/ig,"- Deputy Director");
-            console.log("- Director Replacement");
         }
     }
     //Images
@@ -71,45 +71,36 @@ function repeatedly(){
             case "a-bad.jpg":
                 //Hydra logo
                 els[i].src=chrome.runtime.getURL("images/hydraLoyalty.jpg");
-                console.log("Hydra Loyalty");
             break;
             case "boss.jpg":
                 //Alexander Pierce
                 els[i].src=chrome.runtime.getURL("images/pierce.jpg");
-                console.log("Pierce");
             break;
             case "bad.jpg":
                 //Rumlow
                 els[i].src=chrome.runtime.getURL("images/rumlow.jpg");
-                console.log("Hydra");
             break;
             case "good.jpg":
                 //Coulson
                 els[i].src=chrome.runtime.getURL("images/phil.jpg");
-                console.log("Coulson");
             break;
             case "a-good.jpg":
                 //SHIELD card
                 els[i].src=chrome.runtime.getURL("images/shieldLoyalty.png");
-                console.log("SHIELD Loyalty");
             break;
             case "track-good.jpg":
                 //SHIELD Icon
                 els[i].src=chrome.runtime.getURL("images/shield-icon.png");
-                console.log("SHIELD Icon");
             break;
             case "track-bad.jpg":
                 //Hydra Icon
                 els[i].src=chrome.runtime.getURL("images/hydra-icon.jpg");
-                console.log("Hydra Icon");
             break;
             case "policy-good.jpg":
                 els[i].src=chrome.runtime.getURL("images/shieldLoyalty.png");
-                console.log("SHIELD Policy");
             break;
             case "policy-bad.jpg":
                 els[i].src=chrome.runtime.getURL("images/hydraLoyalty.jpg");
-                console.log("Hydra Policy");
             break;
         }
     }
